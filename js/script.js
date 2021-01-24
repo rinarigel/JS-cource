@@ -1,6 +1,7 @@
 // const user = prompt('What is your name?','');
 // alert (`Hello, ${user}`);
 
+
 // const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели', '');
 
 // const personalMovieDB = {
@@ -73,12 +74,61 @@
 //     num++;
 // }
 
-let num = 50;
+// let num = 50;
 
-for (let i = 1; i < 8; i++) {
-    if (i == 6) {
-        // break;
-        continue;
+// for (let i = 1; i < 8; i++) {
+//     if (i == 6) {
+//         // break;
+//         continue;
+//     }
+//     console.log(i);
+// }
+
+// Автоматизируем процесс задачи вопросов пользователю
+const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели', '');
+
+// Вариант с алертами пользователю
+// if (numberOfFilms <10) {
+//     alert ('Просмотрено достаточно мало фильмов');
+// } else if (numberOfFilms > 10 && numberOfFilms < 50) {
+//     alert ('Вы классический зритель');
+// } else if (numberOfFilms > 50) {
+//     alert ('Вы киноман-любитель');
+// } else {
+//     alert ('Произошла ошибка');
+// }
+
+const personalMovieDB = {
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false
+};
+
+for (let i = 0; i < 2; i++) {
+    const a = prompt('Один из последних просмотренных фильмов', ''),
+          b = prompt('На сколько оцените его?', '');
+
+    if (a != '' && b != '' && a != null && b != null && a.length < 50) {
+        personalMovieDB.movies[a] = b;
+        console.log('done');
+    } else {
+        console.log('error');
+        i--;
     }
-    console.log(i);
+
 }
+
+// Вариант с выводами в консоль
+if (personalMovieDB.count <10) {
+    console.log('Просмотрено достаточно мало фильмов');
+} else if (personalMovieDB.count >= 10 && personalMovieDB.count <= 50) {
+    console.log('Вы классический зритель');
+} else if (personalMovieDB.count > 50) {
+    console.log('Вы киноман-любитель');
+} else {
+    console.log('Произошла ошибка');
+}
+
+console.log(personalMovieDB);
