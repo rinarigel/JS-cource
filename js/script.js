@@ -98,37 +98,81 @@ const numberOfFilms = +prompt('Сколько фильмов вы уже пос�
 //     alert ('Произошла ошибка');
 // }
 
-const personalMovieDB = {
-    count: numberOfFilms,
-    movies: {},
-    actors: {},
-    genres: [],
-    privat: false
+// const personalMovieDB = {
+//     count: numberOfFilms,
+//     movies: {},
+//     actors: {},
+//     genres: [],
+//     privat: false
+// };
+
+// for (let i = 0; i < 2; i++) {
+//     const a = prompt('Один из последних просмотренных фильмов', ''),
+//           b = prompt('На сколько оцените его?', '');
+
+//     if (a != '' && b != '' && a != null && b != null && a.length < 50) {
+//         personalMovieDB.movies[a] = b;
+//         console.log('done');
+//     } else {
+//         console.log('error');
+//         i--;
+//     }
+
+// }
+
+// // Вариант с выводами в консоль
+// if (personalMovieDB.count <10) {
+//     console.log('Просмотрено достаточно мало фильмов');
+// } else if (personalMovieDB.count >= 10 && personalMovieDB.count <= 50) {
+//     console.log('Вы классический зритель');
+// } else if (personalMovieDB.count > 50) {
+//     console.log('Вы киноман-любитель');
+// } else {
+//     console.log('Произошла ошибка');
+// }
+
+// console.log(personalMovieDB);
+
+
+
+
+//Функции
+//Функции лучше называть глаголом
+let num = 20;                       //глобальная переменная
+
+function showFirstMessage(text) {   //аргументов у функции может быть много
+    console.log(text);
+//если объявляем переменные внутри функции, то снаружи они не доступны
+//любая функция может использовать глобальные переменные внутри себя
+    num = 10;                       
+}
+
+showFirstMessage('Hello');
+console.log(num);
+
+function calc(a, b) {
+    return (a + b);
+}
+
+console.log(calc(4,3));
+console.log(calc(4,5));
+console.log(calc(4,7));
+
+function ret() {
+    let num = 50;
+    return num;
+}
+const anothorNum = ret();
+console.log(anothorNum);
+
+
+// Function expression
+const logger = function() {
+    console.log('Hello');
 };
 
-for (let i = 0; i < 2; i++) {
-    const a = prompt('Один из последних просмотренных фильмов', ''),
-          b = prompt('На сколько оцените его?', '');
+logger();                   // использовать переменную мы можем только после ее объявления
 
-    if (a != '' && b != '' && a != null && b != null && a.length < 50) {
-        personalMovieDB.movies[a] = b;
-        console.log('done');
-    } else {
-        console.log('error');
-        i--;
-    }
-
-}
-
-// Вариант с выводами в консоль
-if (personalMovieDB.count <10) {
-    console.log('Просмотрено достаточно мало фильмов');
-} else if (personalMovieDB.count >= 10 && personalMovieDB.count <= 50) {
-    console.log('Вы классический зритель');
-} else if (personalMovieDB.count > 50) {
-    console.log('Вы киноман-любитель');
-} else {
-    console.log('Произошла ошибка');
-}
-
-console.log(personalMovieDB);
+// Стрелочная функция
+// у нее есть свои особенности и использовать везде ее нельзя
+const calk = (a, b) => { return a + b};
