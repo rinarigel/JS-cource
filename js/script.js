@@ -36,19 +36,49 @@
 // } else {
 //     console.log('Ok');
 // }
-const num = 49;
+// const num = 49;
 
-switch (num) {
-    case 49:
-        console.log('No');
-        break;
-    case 100:
-        console.log('No');
-        break;
-    case 50:
-        console.log('True');
-        break;
-    default:
-        console.log('Not today');
-        break;
+// switch (num) {
+//     case 49:
+//         console.log('No');
+//         break;
+//     case 100:
+//         console.log('No');
+//         break;
+//     case 50:
+//         console.log('True');
+//         break;
+//     default:
+//         console.log('Not today');
+//         break;
+// }
+
+// let num = 50;
+
+// while (num <= 55) {
+//     console.log(num);
+//     num++;
+// }
+
+// do {
+//     console.log(num);
+//     num++;
+// }
+// while (num <55);
+
+// let num = 50;
+
+// for (let i = 1; i < 8; i++) {
+//     console.log(num);
+//     num++;
+// }
+
+let num = 50;
+
+for (let i = 1; i < 8; i++) {
+    if (i == 6) {
+        // break;
+        continue;
+    }
+    console.log(i);
 }
