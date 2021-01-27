@@ -1,45 +1,32 @@
-const options = {
-    name: 'test',
-    width: 1024,
-    height: 1024,
-    colors: {
-        border: 'black',
-        bg: 'red'
-    },
-    makeTest: function() {
-        console.log('Test');
-    }
-};
+const arr = [1,2,3,6,8, 22, 10, 6, 7, 77];
 
-options.makeTest();
+// arr.pop();                 //удалить последний элемент
+// arr.push(10);              //добавить последний элемент
 
-// console.log(options.name);
+//Сортировка
+arr.sort(compareNum);
+console.log(arr);
 
-// delete options.name;
-
-// console.log(options);
+function compareNum(a, b) {
+    return a - b;
+}
 
 
-// //перебор свойств внутри объекта
-// let counter = 0;
-// for (let key in options) {
-//     if (typeof(options[key]) == 'object' ) {
-//         for (let i in options[key]) {
-//             console.log(`Свойство ${key} имеет значение ${options[key][i]}`);
-//             counter++;
-//         }
-//     }   else {
-//             console.log(`Свойство ${key} имеет значение ${options[key]}`);
-//             counter++;
-//     }
+// for (let i = 0; i < arr.length; i++) {
+//     console.log(arr[i]);
 // }
-// console.log(counter);
 
+// for (let value of arr) {    //for of работает только с массивоподобными сущностями
+//     console.log(value);
+// }
 
-// console.log(Object.keys(options).length);
+//Перебор массива
+// arr.forEach(function(item, i, arr) {
+//     console.log(`${i}: ${item} внутри массива ${arr}`);
+// });
 
-
-//Деструктуризация объектов
-
-const {border, bg} = options.colors;
-console.log(border);
+//Формируем массив с помощью строки
+// const str = prompt('','');
+// const products = str.split(', ');
+// products.sort();
+// console.log(products.join('; '));
