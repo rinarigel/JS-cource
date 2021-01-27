@@ -1,29 +1,45 @@
-function first () {
-    setTimeout(function() {
-        console.log(1);
-    }, 1000);                   //добавили задержку в 1000мс
-}
+const options = {
+    name: 'test',
+    width: 1024,
+    height: 1024,
+    colors: {
+        border: 'black',
+        bg: 'red'
+    },
+    makeTest: function() {
+        console.log('Test');
+    }
+};
 
-function secoud() {
-    console.log(2);
-}
+options.makeTest();
 
-first();
-secoud();
+// console.log(options.name);
 
-//Callbak function
+// delete options.name;
 
-function learnJS(lang, callback) {
-    console.log(`Я учу: ${lang}`);
-    callback();
-}
+// console.log(options);
 
-// learnJS('JavaScript', function() {
-//     console.log('Я прошел этот урок!');         //анонимная функция
-// });
 
-function done() {
-    console.log('Я прошел этот урок!'); 
-}
+// //перебор свойств внутри объекта
+// let counter = 0;
+// for (let key in options) {
+//     if (typeof(options[key]) == 'object' ) {
+//         for (let i in options[key]) {
+//             console.log(`Свойство ${key} имеет значение ${options[key][i]}`);
+//             counter++;
+//         }
+//     }   else {
+//             console.log(`Свойство ${key} имеет значение ${options[key]}`);
+//             counter++;
+//     }
+// }
+// console.log(counter);
 
-learnJS('JavaScript', done);
+
+// console.log(Object.keys(options).length);
+
+
+//Деструктуризация объектов
+
+const {border, bg} = options.colors;
+console.log(border);
