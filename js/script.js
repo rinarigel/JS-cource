@@ -1,31 +1,14 @@
-const box = document.getElementById('box');
+const box = document.getElementById('box'),
+      btns = document.getElementsByTagName('button'),
+      circles = document.getElementsByClassName('circle'),
+      hearts = document.querySelectorAll('.heart'),
+      oneHeart = document.querySelector('.heart');
 
-console.log(box);
+// console.dir(box);
 
-//Два варианта как получить определенный элемент по тэгам
+//Меняем свойства объекта
+box.style.backgroundColor = 'blue';
+box.style.width = '500px';
 
-//Первый
-//const btns = document.getElementsByTagName('button');   //здесь мы получили псевдомассив
-// console.log(btns[1]);
-
-//Второй
-const btns = document.getElementsByTagName('button')[1];   //получили определенную кнопку по ее индексу  
-console.log(btns);
-
-
-//Ищем элемент по классу
-
- const circles = document.getElementsByClassName('circle');
- console.log(circles);
-
-const hearts = document.querySelectorAll('.heart');
-
-console.log(hearts);
-
-hearts.forEach(item => {
-    console.log(item);
-});
-
-//Ищем первый подходящий под селектор элемент 
-const oneHeart = document.querySelector('.heart');
-console.log(oneHeart);
+btns[1].style.borderRadius = '100%';
+circles[0].style.backgroundColor = 'red';
