@@ -49,14 +49,27 @@ const personalMovieDB = {
         }
     },
     writeYourGenres: function () {
-        for (let i = 1; i <= 3; i++) {
-            let genre = prompt(`Ваш любимых жанр под номером ${i}`);
+        // for (let i = 1; i <= 3; i++) {
+        //     let genre = prompt(`Ваш любимых жанр под номером ${i}`);
 
-            if (genre == '' || genre == null) {
+        //     if (genre == '' || genre == null) {
+        //         console.log('Вы вели некорректные данные или не ввели их вовсе');
+        //         i--;
+        //     } else {
+        //         personalMovieDB.genres[i - 1] = genre;
+        //     }
+        // }
+
+//Альтернативный способ
+        for (let i = 1; i < 2; i++) {
+            let genres = prompt(`Введите ваши любимые жанры через запятую`);
+
+            if (genres == '' || genres == null) {
                 console.log('Вы вели некорректные данные или не ввели их вовсе');
                 i--;
             } else {
-                personalMovieDB.genres[i - 1] = genre;
+                personalMovieDB.genres = genres.split(', ');
+                personalMovieDB.genres.sort();                                      //Сортировка по алфавиту
             }
         }
 
