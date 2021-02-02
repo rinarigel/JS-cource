@@ -1,28 +1,27 @@
-// To string
+// let x = 5;
+// alert(x++); //будет выведено 5, т.к. x++ это постфикс 
 
-console.log(typeof(String(null)));
-console.log(typeof(String(4)));
+// console.log([] + false - null + true); //NaN, пустые массивы = пустая строка
 
-console.log(typeof(null + ''));
+// let y = 1; let x = y = 2; alert(x);  //2
 
-const num = 5;
+// console.log([] + 1 + 2);                //12 - строка
 
-console.log('https://example.com/test/' + num);
+// alert('1'[0]);                             //'1' т к обращаемся к нулевому символу
 
-const fontSize = 26 + 'px';
+// console.log(2 && 1 && null && 0 && undefined); //null - ложь. И - запинается на лжи, ИЛИ - запинается на true
 
-//To number
-console.log(typeof(Number(null)));
-console.log(typeof(Number(+'5')));
-console.log(typeof(parseInt('guyg','5')));
+// console.log(!!(1 && 2) === (1 && 2));               //false т к двойное НЕ (!!) превращает в boolean
 
-//To boolean
+// alert(null || 2 && 3 || 4);                             // console.log(2 && 3) == 3, общий вывод = 3
 
-let swicher = null;
 
-if (swicher) {
-    console.log('Working...');
-}
-console.log(typeof(Boolean(4)));
-console.log(typeof(Boolean(!'44444')));
+// const a = [1, 2, 3];
+// const b = [1, 2, 3];
+// console.log(a == b);                                    //false т к это разные хранилища данных
 
+// alert( +'Infinity');                                        //Infinity - тип число
+
+// console.log('Eжик' > 'яблоко');                                 //false, нужно смотреть табличку юникода
+
+// console.log(0 || '' || 2 || undefined || true || false);            //споткнулись на правде, на 2
