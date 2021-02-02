@@ -49,7 +49,7 @@ const personalMovieDB = {
         }
     },
     writeYourGenres: function () {
-        for (let i = 1; i < 2; i++) {
+        for (let i = 1; i <= 3; i++) {
             let genre = prompt(`Ваш любимых жанр под номером ${i}`);
 
             if (genre == '' || genre == null) {
@@ -59,6 +59,7 @@ const personalMovieDB = {
                 personalMovieDB.genres[i - 1] = genre;
             }
         }
+
         personalMovieDB.genres.forEach((item, i) => {
             console.log(`Любимый жанр ${i + 1} - это ${item}`);
         });
