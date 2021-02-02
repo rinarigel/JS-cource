@@ -1,27 +1,31 @@
-// let x = 5;
-// alert(x++); //будет выведено 5, т.к. x++ это постфикс 
+const box = document.getElementById('box');
 
-// console.log([] + false - null + true); //NaN, пустые массивы = пустая строка
+console.log(box);
 
-// let y = 1; let x = y = 2; alert(x);  //2
+//Два варианта как получить определенный элемент по тэгам
 
-// console.log([] + 1 + 2);                //12 - строка
+//Первый
+//const btns = document.getElementsByTagName('button');   //здесь мы получили псевдомассив
+// console.log(btns[1]);
 
-// alert('1'[0]);                             //'1' т к обращаемся к нулевому символу
-
-// console.log(2 && 1 && null && 0 && undefined); //null - ложь. И - запинается на лжи, ИЛИ - запинается на true
-
-// console.log(!!(1 && 2) === (1 && 2));               //false т к двойное НЕ (!!) превращает в boolean
-
-// alert(null || 2 && 3 || 4);                             // console.log(2 && 3) == 3, общий вывод = 3
+//Второй
+const btns = document.getElementsByTagName('button')[1];   //получили определенную кнопку по ее индексу  
+console.log(btns);
 
 
-// const a = [1, 2, 3];
-// const b = [1, 2, 3];
-// console.log(a == b);                                    //false т к это разные хранилища данных
+//Ищем элемент по классу
 
-// alert( +'Infinity');                                        //Infinity - тип число
+ const circles = document.getElementsByClassName('circle');
+ console.log(circles);
 
-// console.log('Eжик' > 'яблоко');                                 //false, нужно смотреть табличку юникода
+const hearts = document.querySelectorAll('.heart');
 
-// console.log(0 || '' || 2 || undefined || true || false);            //споткнулись на правде, на 2
+console.log(hearts);
+
+hearts.forEach(item => {
+    console.log(item);
+});
+
+//Ищем первый подходящий под селектор элемент 
+const oneHeart = document.querySelector('.heart');
+console.log(oneHeart);
