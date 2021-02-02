@@ -1,19 +1,28 @@
-function hi() {
-    console.log('Hi!');
+// To string
+
+console.log(typeof(String(null)));
+console.log(typeof(String(4)));
+
+console.log(typeof(null + ''));
+
+const num = 5;
+
+console.log('https://example.com/test/' + num);
+
+const fontSize = 26 + 'px';
+
+//To number
+console.log(typeof(Number(null)));
+console.log(typeof(Number(+'5')));
+console.log(typeof(parseInt('guyg','5')));
+
+//To boolean
+
+let swicher = null;
+
+if (swicher) {
+    console.log('Working...');
 }
+console.log(typeof(Boolean(4)));
+console.log(typeof(Boolean(!'44444')));
 
-
-function hello() {
-    console.log('Hello!');
-}
-hi();
-hello();
-
-const arr = [1,5,8,4,34,546,22,7],
-    sorted = arr.sort(compareNum);
-
-function compareNum(a, b) {
-    a = 14, 
-    b = 1
-    return a - b;
-}
