@@ -1,54 +1,26 @@
-const box = document.getElementById('box'),
-      btns = document.getElementsByTagName('button'),
-      circles = document.getElementsByClassName('circle'),
-      hearts = document.querySelectorAll('.heart'),
-      oneHeart = document.querySelector('.heart'),
-      wrapper = document.querySelector('.wrapper');
+/* Задания на урок:
 
-// console.dir(box);
+1) Удалить все рекламные блоки со страницы (правая часть сайта)
 
-//Меняем свойства объекта
-// box.style.backgroundColor = 'blue';
-// box.style.width = '500px';
+2) Изменить жанр фильма, поменять "комедия" на "драма"
 
-box.style.cssText = 'background-color: blue; width: 500px';
+3) Изменить задний фон постера с фильмом на изображение "bg.jpg". Оно лежит в папке img.
+Реализовать только при помощи JS
 
-btns[1].style.borderRadius = '100%';
-circles[0].style.backgroundColor = 'red';
+4) Список фильмов на странице сформировать на основании данных из этого JS файла.
+Отсортировать их по алфавиту 
 
-// for (let i = 0; i < hearts.length; i ++) {
-//     hearts[i].style.backgroundColor = 'blue';
-// }
+5) Добавить нумерацию выведенных фильмов */
 
-hearts.forEach(item => {
-    item.style.backgroundColor = 'blue';
-});
+'use strict';
 
-const div = document.createElement('div');
-// const text = document.createTextNode('I was here');
+const movieDB = {
+    movies: [
+        "Логан",
+        "Лига справедливости",
+        "Ла-ла лэнд",
+        "Одержимость",
+        "Скотт Пилигрим против..."
+    ]
+};
 
-div.classList.add('black');
-
-// document.body.append(div);
-wrapper.appendChild(div);
-
-document.querySelector('.wrapper').append(div);
-
-// wrapper.prepend(div);
-
-// hearts[0].before(div);
-// hearts[0].after(div);
-
-// circles[0].remove();
-
-// hearts[0].replaceWith(circles[0]);
-
-// wrapper.removeChild(hearts[1]);
-
-// wrapper.replaceChild(circles[0],hearts[0]);
-
-div.innerHTML = '<h1>Hello</h1>';             //так можно сломать верстку
-
-// div.textContent = 'Hello';
-
-div.insertAdjacentHTML("beforebegin", '<h2>Hello</h2>');
